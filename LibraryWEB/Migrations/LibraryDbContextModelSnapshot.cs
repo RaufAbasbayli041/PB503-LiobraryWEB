@@ -51,7 +51,7 @@ namespace LibraryWEB.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Delated")
+                    b.Property<int>("IsDelated")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
@@ -84,12 +84,12 @@ namespace LibraryWEB.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Delated")
-                        .HasColumnType("int");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("IsDelated")
+                        .HasColumnType("int");
 
                     b.Property<int>("PhoneNumber")
                         .HasColumnType("int");
@@ -116,12 +116,12 @@ namespace LibraryWEB.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Delated")
-                        .HasColumnType("int");
-
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("IsDelated")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -152,7 +152,7 @@ namespace LibraryWEB.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Delated")
+                    b.Property<int>("IsDelated")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
@@ -183,7 +183,7 @@ namespace LibraryWEB.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Delated")
+                    b.Property<int>("IsDelated")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")

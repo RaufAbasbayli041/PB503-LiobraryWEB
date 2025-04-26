@@ -1,7 +1,10 @@
 using LibraryWEB.DataBase;
+using LibraryWEB.Entity;
 using LibraryWEB.Profiles;
 using LibraryWEB.Repository.Implementation;
 using LibraryWEB.Repository.Interface;
+using LibraryWEB.Services;
+using LibraryWEB.Services.implementation;
 using Microsoft.EntityFrameworkCore;
 
 namespace LibraryWEB
@@ -16,11 +19,23 @@ namespace LibraryWEB
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<LibraryDbContext>(ops => ops.UseSqlServer(builder.Configuration.GetConnectionString("SQLServerConnectionString"))); 
             builder.Services.AddAutoMapper(typeof(CustomProfile));
+
             builder.Services.AddScoped<IBookRepository,BookRepository>();
+            builder.Services.AddScoped<IBookService,BookService>();
+
             builder.Services.AddScoped<IAuthorRepository,AuthorRepository>();
+            builder.Services.AddScoped<IAuthorService, AuthorService>();
+
             builder.Services.AddScoped<IAuthorContactRepository, AuthorContactRepository>();
+           
             builder.Services.AddScoped<IBookCategoryRepository, BookCategoryRepository>();
+            builder.Services.AddScoped<IBookCategoryService, BookCategoryService>();
+
             builder.Services.AddScoped<IPublisherRepository, PublisherRepository>();
+
+
+
+            builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
 
             var app = builder.Build();
