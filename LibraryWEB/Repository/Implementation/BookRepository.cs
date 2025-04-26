@@ -16,7 +16,7 @@ namespace LibraryWEB.Repository.Implementation
             _context = context;
         }
 
-        public async Task<Book> CreatAsync(Book book)
+        public async Task<Book> CreateAsync(Book book)
         {
             await _context.Books.AddAsync(book);
             _context.SaveChangesAsync();
@@ -35,10 +35,25 @@ namespace LibraryWEB.Repository.Implementation
             return data;
         }
 
-        public async void UpdateAsync(Book book)
+        public async void Update(Book book)
         {
             _context.Books.Update(book);
             _context.SaveChangesAsync();
         }
+
+        public async void Update2(Book book)
+        {
+            var existingBook = await _context.Books.FindAsync(book.Id);
+            if (existingBook == null)
+            {
+                throw new Exception("Book not found");
+            }
+            _context.Entry(existingBook).State = EntityState.Detached;
+
+            _context.Attach(book);
+            _context.Entry(book).State = EntityState.Modified;
+            _context.SaveChangesAsync();
+        }
+
     }
 }

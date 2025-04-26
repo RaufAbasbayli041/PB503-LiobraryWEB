@@ -16,7 +16,7 @@ namespace LibraryWEB.Repository.Implementation
             _context = context;
         }
 
-        public async Task<Publisher> CreatAsync(Publisher publisher)
+        public async Task<Publisher> CreateAsync(Publisher publisher)
         {
             await _context.Publishers.AddAsync(publisher);
             await _context.SaveChangesAsync();
@@ -35,7 +35,7 @@ namespace LibraryWEB.Repository.Implementation
             return data;
         }
 
-        public void UpdateAsync(Publisher publisher)
+        public void Update(Publisher publisher)
         {
             _context.Update(publisher);
             _context.SaveChanges();

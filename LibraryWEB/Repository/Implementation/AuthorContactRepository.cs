@@ -15,7 +15,7 @@ namespace LibraryWEB.Repository.Implementation
             _context = context;
         }
 
-        public async Task<AuthorContact> CreatAsync(AuthorContact authorContact)
+        public async Task<AuthorContact> CreateAsync(AuthorContact authorContact)
         {
             await _context.AuthorContacts.AddAsync(authorContact);
             await _context.SaveChangesAsync();
@@ -35,7 +35,7 @@ namespace LibraryWEB.Repository.Implementation
             return data;
         }
 
-        public async void UpdateAsync(AuthorContact authorContact)
+        public async void Update(AuthorContact authorContact)
         {
           
             _context.AuthorContacts.Update(authorContact);

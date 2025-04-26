@@ -15,7 +15,7 @@ namespace LibraryWEB.Repository.Implementation
             _context = context;
         }
 
-        public async Task<Author> CreatAsync(Author author)
+        public async Task<Author> CreateAsync(Author author)
         {
            await _context.Authors.AddAsync(author);
             await _context.SaveChangesAsync();  
@@ -34,9 +34,22 @@ namespace LibraryWEB.Repository.Implementation
             return data;
         }
 
-        public void UpdateAsync(Author author)
+        public void Update(Author author)
         {
             _context.Authors.Update(author);
+            _context.SaveChanges();
+        }
+
+        public async void Update2(Author author)
+        {
+            var existingAuthor = await _context.Authors.FindAsync(author.Id);
+            if (existingAuthor == null)
+            {
+                throw new Exception("Author not found");
+            }
+            _context.Entry(existingAuthor).State = EntityState.Detached;
+            _context.Attach(author);
+            _context.Entry(author).State = EntityState.Modified;
             _context.SaveChanges();
         }
     }

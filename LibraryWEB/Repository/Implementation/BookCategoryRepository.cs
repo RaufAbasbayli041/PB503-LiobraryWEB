@@ -13,7 +13,7 @@ namespace LibraryWEB.Repository.Implementation
         {
             _context = context;
         }
-        public async Task<BookCategory> CreatAsync(BookCategory bookCategory)
+        public async Task<BookCategory> CreateAsync(BookCategory bookCategory)
         {
             await _context.BookCategories.AddAsync(bookCategory);
             await _context.SaveChangesAsync();
@@ -32,9 +32,22 @@ namespace LibraryWEB.Repository.Implementation
             return data;
         }
 
-        public void UpdateAsync(BookCategory bookCategory)
+        public void Update(BookCategory bookCategory)
         {
             _context.BookCategories.Update(bookCategory);
+            _context.SaveChanges();
+        }
+
+        public async void Update2(BookCategory bookCategory)
+        {
+            var existingCategory = await _context.BookCategories.FindAsync(bookCategory.Id);
+            if (existingCategory == null)
+            {
+                throw new Exception("Category not found");
+            }
+            _context.Entry(existingCategory).State = EntityState.Detached;
+            _context.Attach(bookCategory);
+            _context.Entry(bookCategory).State = EntityState.Modified;
             _context.SaveChanges();
         }
     }

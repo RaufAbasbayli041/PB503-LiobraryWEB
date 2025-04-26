@@ -1,9 +1,8 @@
 ﻿namespace LibraryWEB.Entity
 {
-    public class AuthorContact
+    public class AuthorContact : BaseEntity
     {
-        public int Id { get; set; }
-        public string Email { get; set; }
+                public string Email { get; set; }
         public int PhoneNumber { get; set; }
         public int AuthorId { get; set; }
         public Author Author { get; set; }
