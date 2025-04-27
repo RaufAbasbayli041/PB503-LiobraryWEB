@@ -19,14 +19,25 @@ namespace LibraryWEB.Repository.Implementation
         public async Task<Book> CreateAsync(Book book)
         {
             await _context.Books.AddAsync(book);
-            _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
             return book;
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            var book = await _context.Books.FindAsync(id);
+            _context.Books.Remove(book);
+
+            //await _context.Books
+            //    .Where(x => x.Id == id)
+            //    .ExecuteDeleteAsync();
         }
 
         public async Task<List<Book>> GetAllAsync()
         {
             var datas = await _context.Books.ToListAsync();
-            return datas;
+           
+            return datas.Where(x => x.IsDelated == 0).ToList();
         }
 
         public async Task<Book> GetByIdAsync(int id)
@@ -34,25 +45,23 @@ namespace LibraryWEB.Repository.Implementation
             var data = await _context.Books.FindAsync(id);
             return data;
         }
+           
 
-        public async void Update(Book book)
-        {
-            _context.Books.Update(book);
-            _context.SaveChangesAsync();
-        }
-
-        public async void Update2(Book book)
+        public async Task Update(Book book)
         {
             var existingBook = await _context.Books.FindAsync(book.Id);
             if (existingBook == null)
             {
                 throw new Exception("Book not found");
             }
+
+
+
             _context.Entry(existingBook).State = EntityState.Detached;
 
             _context.Attach(book);
             _context.Entry(book).State = EntityState.Modified;
-            _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
         }
 
     }

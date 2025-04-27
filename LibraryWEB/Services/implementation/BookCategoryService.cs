@@ -55,7 +55,7 @@ namespace LibraryWEB.Services.implementation
             if (item is not null)
             {
                 var entity = _mapper.Map<BookCategory>(item);
-                _bookCategoryRepository.Update2(entity);
+                _bookCategoryRepository.Update(entity);
 
             };
         }

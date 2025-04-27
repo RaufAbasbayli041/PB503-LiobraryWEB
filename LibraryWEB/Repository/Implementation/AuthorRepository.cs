@@ -34,13 +34,9 @@ namespace LibraryWEB.Repository.Implementation
             return data;
         }
 
-        public void Update(Author author)
-        {
-            _context.Authors.Update(author);
-            _context.SaveChanges();
-        }
+   
 
-        public async void Update2(Author author)
+        public async void Update(Author author)
         {
             var existingAuthor = await _context.Authors.FindAsync(author.Id);
             if (existingAuthor == null)

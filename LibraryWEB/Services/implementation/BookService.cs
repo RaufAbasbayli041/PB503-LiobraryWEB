@@ -39,14 +39,14 @@ namespace LibraryWEB.Services.implementation
             return dto;
         }
 
-        public async void Update(BookDTO bookDTO)
+        public async Task Update(BookDTO bookDTO)
         {
             var item = await _bookRepository.GetByIdAsync(bookDTO.Id);
             if (item is not null)
             {
-             var entity = _mapper.Map<Book>(item);
-                _bookRepository.Update2(entity);
-
+             var entity = _mapper.Map<Book>(bookDTO);
+               await _bookRepository.Update(entity);
+                
             }
         }
 
@@ -56,7 +56,7 @@ namespace LibraryWEB.Services.implementation
             if (data is not null)
             {
                 data.IsDelated = 1;
-                _bookRepository.Update(data);
+                await _bookRepository.Update(data);
 
             }
         }

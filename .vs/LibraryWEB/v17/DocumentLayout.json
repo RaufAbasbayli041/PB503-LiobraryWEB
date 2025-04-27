@@ -3,28 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\homework\\pb503-libraryweb\\libraryweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|solutionrelative:libraryweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\homework\\pb503-libraryweb\\libraryweb\\views\\book\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|solutionrelative:libraryweb\\views\\book\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\homework\\pb503-libraryweb\\libraryweb\\entity\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|solutionrelative:libraryweb\\entity\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\homework\\pb503-libraryweb\\libraryweb\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|solutionrelative:libraryweb\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\homework\\pb503-libraryweb\\libraryweb\\entity\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|solutionrelative:libraryweb\\entity\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\homework\\pb503-libraryweb\\libraryweb\\views\\book\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|solutionrelative:libraryweb\\views\\book\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\homework\\pb503-libraryweb\\libraryweb\\entity\\authorcontact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|solutionrelative:libraryweb\\entity\\authorcontact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\homework\\pb503-libraryweb\\libraryweb\\services\\implementation\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|solutionrelative:libraryweb\\services\\implementation\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\homework\\pb503-libraryweb\\libraryweb\\entity\\bookcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|solutionrelative:libraryweb\\entity\\bookcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\homework\\pb503-libraryweb\\libraryweb\\services\\interface\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|solutionrelative:libraryweb\\services\\interface\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\homework\\pb503-libraryweb\\libraryweb\\entity\\publisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|solutionrelative:libraryweb\\entity\\publisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\homework\\pb503-libraryweb\\libraryweb\\repository\\implementation\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|solutionrelative:libraryweb\\repository\\implementation\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\homework\\pb503-libraryweb\\libraryweb\\repository\\interface\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|solutionrelative:libraryweb\\repository\\interface\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\homework\\pb503-libraryweb\\libraryweb\\views\\book\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|solutionrelative:libraryweb\\views\\book\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\homework\\pb503-libraryweb\\libraryweb\\views\\book\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4A3C1C83-F6DD-4450-B398-3E32A5C7BC67}|LibraryWEB\\LibraryWEB.csproj|solutionrelative:libraryweb\\views\\book\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,80 +54,119 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Publisher.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Entity\\Publisher.cs",
-              "RelativeDocumentMoniker": "LibraryWEB\\Entity\\Publisher.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Entity\\Publisher.cs",
-              "RelativeToolTip": "LibraryWEB\\Entity\\Publisher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T12:43:24.21Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BookCategory.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Entity\\BookCategory.cs",
-              "RelativeDocumentMoniker": "LibraryWEB\\Entity\\BookCategory.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Entity\\BookCategory.cs",
-              "RelativeToolTip": "LibraryWEB\\Entity\\BookCategory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T12:43:23.026Z",
+              "DocumentIndex": 0,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Views\\Book\\Delete.cshtml",
+              "RelativeDocumentMoniker": "LibraryWEB\\Views\\Book\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Views\\Book\\Delete.cshtml",
+              "RelativeToolTip": "LibraryWEB\\Views\\Book\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-27T20:06:18.917Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AuthorContact.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Entity\\AuthorContact.cs",
-              "RelativeDocumentMoniker": "LibraryWEB\\Entity\\AuthorContact.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Entity\\AuthorContact.cs",
-              "RelativeToolTip": "LibraryWEB\\Entity\\AuthorContact.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Title": "BookService.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Services\\implementation\\BookService.cs",
+              "RelativeDocumentMoniker": "LibraryWEB\\Services\\implementation\\BookService.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Services\\implementation\\BookService.cs",
+              "RelativeToolTip": "LibraryWEB\\Services\\implementation\\BookService.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAA5wDQAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T12:43:00.728Z",
+              "WhenOpened": "2025-04-27T19:51:10.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IBookService.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Services\\interface\\IBookService.cs",
+              "RelativeDocumentMoniker": "LibraryWEB\\Services\\interface\\IBookService.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Services\\interface\\IBookService.cs",
+              "RelativeToolTip": "LibraryWEB\\Services\\interface\\IBookService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T19:50:36.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BookRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Repository\\Implementation\\BookRepository.cs",
+              "RelativeDocumentMoniker": "LibraryWEB\\Repository\\Implementation\\BookRepository.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Repository\\Implementation\\BookRepository.cs",
+              "RelativeToolTip": "LibraryWEB\\Repository\\Implementation\\BookRepository.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAACcAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T19:48:27.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IBookRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Repository\\Interface\\IBookRepository.cs",
+              "RelativeDocumentMoniker": "LibraryWEB\\Repository\\Interface\\IBookRepository.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Repository\\Interface\\IBookRepository.cs",
+              "RelativeToolTip": "LibraryWEB\\Repository\\Interface\\IBookRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T19:48:02.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Update.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Views\\Book\\Update.cshtml",
+              "RelativeDocumentMoniker": "LibraryWEB\\Views\\Book\\Update.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Views\\Book\\Update.cshtml",
+              "RelativeToolTip": "LibraryWEB\\Views\\Book\\Update.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-27T19:36:53.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Views\\Book\\Details.cshtml",
+              "RelativeDocumentMoniker": "LibraryWEB\\Views\\Book\\Details.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Views\\Book\\Details.cshtml",
+              "RelativeToolTip": "LibraryWEB\\Views\\Book\\Details.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-27T19:35:04.067Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Author.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Entity\\Author.cs",
-              "RelativeDocumentMoniker": "LibraryWEB\\Entity\\Author.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Entity\\Author.cs",
-              "RelativeToolTip": "LibraryWEB\\Entity\\Author.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T12:42:38.516Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Views\\Book\\Index.cshtml",
+              "RelativeDocumentMoniker": "LibraryWEB\\Views\\Book\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Views\\Book\\Index.cshtml",
+              "RelativeToolTip": "LibraryWEB\\Views\\Book\\Index.cshtml",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAqwBwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-27T19:31:22.104Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Book.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Entity\\Book.cs",
-              "RelativeDocumentMoniker": "LibraryWEB\\Entity\\Book.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Entity\\Book.cs",
-              "RelativeToolTip": "LibraryWEB\\Entity\\Book.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
+              "Title": "BookController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "LibraryWEB\\Controllers\\BookController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Controllers\\BookController.cs",
+              "RelativeToolTip": "LibraryWEB\\Controllers\\BookController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowDsAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T12:41:29.923Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Program.cs",
-              "RelativeDocumentMoniker": "LibraryWEB\\Program.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\Homework\\PB503-LibraryWEB\\LibraryWEB\\Program.cs",
-              "RelativeToolTip": "LibraryWEB\\Program.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAQwDMAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T11:18:02.812Z",
+              "WhenOpened": "2025-04-27T19:19:25.257Z",
               "EditorCaption": ""
             }
           ]

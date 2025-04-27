@@ -32,13 +32,8 @@ namespace LibraryWEB.Repository.Implementation
             return data;
         }
 
-        public void Update(BookCategory bookCategory)
-        {
-            _context.BookCategories.Update(bookCategory);
-            _context.SaveChanges();
-        }
-
-        public async void Update2(BookCategory bookCategory)
+  
+        public async void Update(BookCategory bookCategory)
         {
             var existingCategory = await _context.BookCategories.FindAsync(bookCategory.Id);
             if (existingCategory == null)
