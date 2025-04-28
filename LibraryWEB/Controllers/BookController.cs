@@ -53,11 +53,18 @@ namespace LibraryWEB.Controllers
             return View(items);
         }
 
-        [HttpDelete]
+        [HttpGet]
         public async Task<IActionResult> Delete(int id)
         {
+           var data= await _bookService.GetByIdAsync(id);
+            return View(data);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> PostDelete(int id)
+        {
             await _bookService.DeleteAsync(id);
-            return View();
+            return RedirectToAction("Index");
         }
     }
 }

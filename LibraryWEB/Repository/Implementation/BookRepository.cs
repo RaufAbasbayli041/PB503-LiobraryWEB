@@ -26,6 +26,10 @@ namespace LibraryWEB.Repository.Implementation
         public async Task DeleteAsync(int id)
         {
             var book = await _context.Books.FindAsync(id);
+            if (book == null)
+            {
+                throw new Exception("Book not found");
+            }
             _context.Books.Remove(book);
 
             //await _context.Books
@@ -54,8 +58,6 @@ namespace LibraryWEB.Repository.Implementation
             {
                 throw new Exception("Book not found");
             }
-
-
 
             _context.Entry(existingBook).State = EntityState.Detached;
 

@@ -7,9 +7,8 @@ namespace LibraryWEB.Services
     {
         Task<BookDTO> CreateAsync(BookDTO bookDTO);
         Task Update(BookDTO bookDTO);
-
+        Task DeleteAsync(int id);
         Task<List<BookDTO>> GetAllAsync();
         Task<BookDTO> GetByIdAsync(int id);
-        Task DeleteAsync(int id);
     }
 }

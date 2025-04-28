@@ -23,6 +23,16 @@ namespace LibraryWEB.Repository.Implementation
             return publisher;   
         }
 
+        public async Task DeleteAsync(int id)
+        {
+            var data = await _context.Publishers.FindAsync(id);
+            if (data == null)
+            {
+                throw new Exception("Publisher not found");
+            }
+            _context.Publishers.Remove(data);
+        }
+
         public async Task<List<Publisher>> GetAllAsync()
         { 
             var datas = await _context.Publishers.ToListAsync();

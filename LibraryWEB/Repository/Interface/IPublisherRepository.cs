@@ -6,6 +6,7 @@ namespace LibraryWEB.Repository.Interface
     {
         Task<Publisher> CreateAsync(Publisher publisher);
         void Update(Publisher publisher);
+        Task DeleteAsync(int id);
         Task<List<Publisher>> GetAllAsync();
         Task<Publisher> GetByIdAsync(int id);
     }

@@ -20,6 +20,16 @@ namespace LibraryWEB.Repository.Implementation
             return bookCategory;
         }
 
+        public async Task DeleteAsync(int id)
+        {
+            var data = await _context.BookCategories.FindAsync(id);
+            if (data == null)
+            {
+                throw new Exception("Category not found");
+            }
+            _context.BookCategories.Remove(data);
+        }
+
         public async Task<List<BookCategory>> GetAllAsync()
         {
             var datas = await _context.BookCategories.ToListAsync();

@@ -42,17 +42,21 @@ namespace LibraryWEB.Services.implementation
         public async Task Update(BookDTO bookDTO)
         {
             var item = await _bookRepository.GetByIdAsync(bookDTO.Id);
+            if (bookDTO.Id <1)
+            {
+                throw new ArgumentException("Id must be greater than 0");
+            }
             if (item is not null)
             {
              var entity = _mapper.Map<Book>(bookDTO);
-               await _bookRepository.Update(entity);
-                
+               await _bookRepository.Update(entity);                
             }
         }
 
         public async Task DeleteAsync(int id)
         {
             var data = await _bookRepository.GetByIdAsync(id);
+            
             if (data is not null)
             {
                 data.IsDelated = 1;

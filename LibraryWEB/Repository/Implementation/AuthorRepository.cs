@@ -22,6 +22,16 @@ namespace LibraryWEB.Repository.Implementation
             return author;
         }
 
+        public async Task DeleteAsync(int id)
+        {
+            var data = await _context.Authors.FindAsync(id);
+            if (data == null)
+            {
+                throw new Exception("Author not found");
+            }
+            _context.Authors.Remove(data);
+        }
+
         public async Task<List<Author>> GetAllAsync()
         {
             var datas = await _context.Authors.ToListAsync();

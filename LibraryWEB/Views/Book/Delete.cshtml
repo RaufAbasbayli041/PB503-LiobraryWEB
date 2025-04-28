@@ -11,7 +11,7 @@
     <h4>BookDTO</h4>
     <hr />
     <dl class="row">
-        <form asp-action="Delete">
+       
         <dt class="col-sm-2">
                 @Html.DisplayNameFor(model => model.Description)
         </dt>
@@ -36,11 +36,11 @@
         <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.Name)
         </dd>
-        </form>
+     
 
     </dl>
 
-    <form asp-action="Delete">
+    <form asp-action="PostDelete" asp-route-id="@Model.Id">
         <input type="submit" value="Delete" class="btn btn-danger" /> |
         <a asp-action="Index">Back to List</a>
     </form>
