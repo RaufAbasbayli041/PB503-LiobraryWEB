@@ -20,6 +20,7 @@ namespace LibraryWEB.Services.implementation
 
         public async Task<AuthorDTO> CreateAsync(AuthorDTO authorDTO)
         {
+
             var input = _mapper.Map<Author>(authorDTO);
             var output = await _authorRepository.CreateAsync(input);
             var dto = _mapper.Map<AuthorDTO>(output);
@@ -29,6 +30,10 @@ namespace LibraryWEB.Services.implementation
 
         public async Task DeleteAsync(int id)
         {
+            if (id < 0)
+            {
+                throw new ArgumentException("author not found", nameof(id));
+            }
             var item = await _authorRepository.GetByIdAsync(id);
             if (item is not null)
             {
@@ -46,18 +51,27 @@ namespace LibraryWEB.Services.implementation
 
         public async Task<AuthorDTO> GetByIdAsync(int id)
         {
+            if (id < 0)
+            {
+                throw new ArgumentException("author not found", nameof(id));
+            }
             var data = await _authorRepository.GetByIdAsync(id);
             var dto = _mapper.Map<AuthorDTO>(data);
             return dto;
         }
 
-        public async void Update(AuthorDTO authorDTO)
+        public async Task UpdateAsync(AuthorDTO authorDTO)
         {
+            if (authorDTO.Id < 1)
+            {
+                throw new ArgumentException("Id must be greater than 0");
+            }
+            
             var data = await _authorRepository.GetByIdAsync(authorDTO.Id);
             if (data is not null)
             {
                 var entity = _mapper.Map<Author>(data);
-                _authorRepository.Update(entity);  
+               await _authorRepository.Update(entity);  
             }
         }
     }

@@ -1,66 +1,67 @@
 ﻿using LibraryWEB.DTO;
 using LibraryWEB.Services;
+using LibraryWEB.Services.implementation;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LibraryWEB.Controllers
 {
-    public class BookController : Controller
+    public class AuthorController : Controller
     {
-        private readonly IBookService _bookService;
+        private readonly IAuthorService _authorService;
 
-        public BookController(IBookService bookService)
+        public AuthorController(IAuthorService authorService)
         {
-            _bookService = bookService;
+            _authorService = authorService;
         }
 
         public async Task<IActionResult> Index()
         {
-            var items = await _bookService.GetAllAsync();
+            var items = await _authorService.GetAllAsync();
             return View(items);
         }
 
         [HttpGet]
         public async Task<IActionResult> Create()
-        {            
+        {         
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(BookDTO bookDTO)
+        public async Task<IActionResult> Create(AuthorDTO authorDTO)
         {
             try
             {
-           await _bookService.CreateAsync(bookDTO);
+                await _authorService.CreateAsync(authorDTO);
 
-            return RedirectToAction("Index");
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError("", ex.Message);
-                return View(bookDTO);
-            }
-
-        }
-        [HttpGet]
-        public async Task<IActionResult> Update(int id)
-        {
-
-            var item = await _bookService.GetByIdAsync(id);
-            return View(item);
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Update(BookDTO bookDTO)
-        {
-            try
-            {
-                await _bookService.Update(bookDTO);
                 return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
                 ModelState.AddModelError("", ex.Message);
-                return View(bookDTO);
+                return View(authorDTO);
+            }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Update(int id)
+        {
+
+            var item = await _authorService.GetByIdAsync(id);
+            return View(item);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Update(AuthorDTO authorDTO)
+        {
+            try
+            {
+                await _authorService.UpdateAsync(authorDTO);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", ex.Message);
+                return View(authorDTO);
             }
 
         }
@@ -68,14 +69,14 @@ namespace LibraryWEB.Controllers
         [HttpGet]
         public async Task<IActionResult> Details(int id)
         {
-            var items = await _bookService.GetByIdAsync(id);
+            var items = await _authorService.GetByIdAsync(id);
             return View(items);
         }
 
         [HttpGet]
         public async Task<IActionResult> Delete(int id)
         {
-           var data= await _bookService.GetByIdAsync(id);
+            var data = await _authorService.GetByIdAsync(id);
             return View(data);
         }
 
@@ -85,12 +86,12 @@ namespace LibraryWEB.Controllers
             try
             {
 
-            await _bookService.DeleteAsync(id);
-            return RedirectToAction("Index");
+                await _authorService.DeleteAsync(id);
+                return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
-               ex.Message.ToString();
+                ex.Message.ToString();
                 return View();
             }
         }

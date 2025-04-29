@@ -19,6 +19,23 @@ namespace LibraryWEB.Services.implementation
 
         public async Task<BookDTO> CreateAsync(BookDTO bookDTO)
         {
+            //if (bookDTO is null)
+            //{
+            //    throw new ArgumentNullException(nameof(bookDTO));
+            //}
+            //if (string.IsNullOrWhiteSpace(bookDTO.Name))
+            //{
+            //    throw new ArgumentException("Name cannot be null or empty", nameof(bookDTO.Name));
+            //}
+            //if (string.IsNullOrWhiteSpace(bookDTO.Description))
+            //{
+            //    throw new ArgumentException("Description cannot be null or empty", nameof(bookDTO.Description));
+            //}
+            if (bookDTO.Pages < 1)
+            {
+                throw new ArgumentException("Pages must be greater than 0", nameof(bookDTO.Pages));
+            }
+
             var inputData = _mapper.Map<Book>(bookDTO);
             var outputData = await _bookRepository.CreateAsync(inputData);
             var dto = _mapper.Map<BookDTO>(outputData);
@@ -34,7 +51,12 @@ namespace LibraryWEB.Services.implementation
 
         public async Task<BookDTO> GetByIdAsync(int id)
         {
+            if (id < 0)
+            {
+                throw new ArgumentException("Book not found", nameof(id));
+            }
             var data = await _bookRepository.GetByIdAsync(id);
+
             var dto = _mapper.Map<BookDTO>(data);
             return dto;
         }
@@ -46,6 +68,11 @@ namespace LibraryWEB.Services.implementation
             {
                 throw new ArgumentException("Id must be greater than 0");
             }
+            if (bookDTO.Pages < 1)
+            {
+                throw new ArgumentException("Pages must be greater than 0", nameof(bookDTO.Pages));
+            }
+
             if (item is not null)
             {
              var entity = _mapper.Map<Book>(bookDTO);

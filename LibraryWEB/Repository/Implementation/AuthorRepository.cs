@@ -46,7 +46,7 @@ namespace LibraryWEB.Repository.Implementation
 
    
 
-        public async void Update(Author author)
+        public async Task Update(Author author)
         {
             var existingAuthor = await _context.Authors.FindAsync(author.Id);
             if (existingAuthor == null)
@@ -56,7 +56,7 @@ namespace LibraryWEB.Repository.Implementation
             _context.Entry(existingAuthor).State = EntityState.Detached;
             _context.Attach(author);
             _context.Entry(author).State = EntityState.Modified;
-            _context.SaveChanges();
+           await _context.SaveChangesAsync();
         }
     }
 }

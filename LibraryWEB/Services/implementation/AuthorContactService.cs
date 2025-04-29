@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using LibraryWEB.DTO;
 using LibraryWEB.Entity;
+using LibraryWEB.Repository.Implementation;
 using LibraryWEB.Repository.Interface;
 
 namespace LibraryWEB.Services.implementation
@@ -26,6 +27,10 @@ namespace LibraryWEB.Services.implementation
 
         public async Task DeleteAsync(int id)
         {
+            if (id < 0)
+            {
+                throw new ArgumentException("Contact not found", nameof(id));
+            }
             var data =await _authorContactRepository.GetByIdAsync(id);
             if (data is not null)
             {
@@ -35,19 +40,39 @@ namespace LibraryWEB.Services.implementation
             
         }
 
-        public Task<List<AuthorContactDTo>> GetAllAsync()
+        public async Task<List<AuthorContactDTo>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            var datas = await _authorContactRepository.GetAllAsync();
+            var dto = _mapper.Map<List<AuthorContactDTo>>(datas);
+            return dto;
         }
 
-        public Task<AuthorContactDTo> GetByIdAsync(int id)
+        public async Task<AuthorContactDTo> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            if (id < 0)
+            {
+                throw new ArgumentException("contact not found", nameof(id));
+            }
+            var data = await _authorContactRepository.GetByIdAsync(id);
+
+            var dto = _mapper.Map<AuthorContactDTo>(data);
+            return dto;
         }
 
-        public void Update(AuthorContactDTo athorContactDTo)
+        public async Task Update(AuthorContactDTo athorContactDTo)
         {
-            throw new NotImplementedException();
+            var item = await _authorContactRepository.GetByIdAsync(athorContactDTo.Id);
+            if (athorContactDTo.Id < 1)
+            {
+                throw new ArgumentException("Id must be greater than 0");
+            }
+           
+
+            if (item is not null)
+            {
+                var entity = _mapper.Map<AuthorContact>(athorContactDTo);
+               await _authorContactRepository.UpdateAsync(entity);
+            }
         }
     }
 }

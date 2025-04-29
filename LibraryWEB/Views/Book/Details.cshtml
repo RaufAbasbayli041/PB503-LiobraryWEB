@@ -10,7 +10,19 @@
     <h4>BookDTO</h4>
     <hr />
     <dl class="row" >
-        <form asp-action="Details">
+       
+        <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Name)
+        </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Description)
         </dt>
@@ -22,20 +34,20 @@
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Pages)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Id)
+        </dd>       
+        <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.UpdateDate)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Id)
+        <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.UpdateDate)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
+        <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CreatedDate)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
+        <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CreatedDate)
         </dd>
-        </form>
+       
     </dl>
 </div>
 <div>

@@ -9,7 +9,7 @@ namespace LibraryWEB.Repository.Implementation
 {
     public class PublisherRepository : IPublisherRepository
     {
-        private readonly LibraryDbContext? _context;
+        private readonly LibraryDbContext _context;
 
         public PublisherRepository(LibraryDbContext? context)
         {
@@ -45,10 +45,20 @@ namespace LibraryWEB.Repository.Implementation
             return data;
         }
 
-        public void Update(Publisher publisher)
+     
+        public async Task UpdateAsync(Publisher publisher)
         {
-            _context.Update(publisher);
-            _context.SaveChanges();
+            var existingPublisher = await _context.Publishers.FindAsync(publisher.Id);
+            if (existingPublisher != null)
+            {
+                existingPublisher.Name = publisher.Name;
+                existingPublisher.BookId = publisher.BookId;
+               await _context.SaveChangesAsync();
+            }
+            else
+            {
+                throw new Exception("Publisher not found");
+            }
         }
     }
 }

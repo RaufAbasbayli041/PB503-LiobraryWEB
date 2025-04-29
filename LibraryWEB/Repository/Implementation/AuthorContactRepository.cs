@@ -50,12 +50,17 @@ namespace LibraryWEB.Repository.Implementation
             return data;
         }
 
-        public async void Update(AuthorContact authorContact)
+        public async Task UpdateAsync(AuthorContact authorContact)
         {
-          
-            _context.AuthorContacts.Update(authorContact);
-            _context.SaveChanges(); 
-
+            var existingAuthorContact = await _context.AuthorContacts.FindAsync(authorContact.Id);
+            if (existingAuthorContact == null)
+            {
+                throw new Exception("AuthorContact not found");
+            }
+            _context.Entry(existingAuthorContact).State = EntityState.Detached;
+            _context.Attach(authorContact);
+            _context.Entry(authorContact).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
 
         }
     }
