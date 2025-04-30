@@ -3,6 +3,7 @@ using LibraryWEB.DTO;
 using LibraryWEB.Entity;
 using LibraryWEB.Repository.Implementation;
 using LibraryWEB.Repository.Interface;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace LibraryWEB.Services.implementation
 {
@@ -33,6 +34,13 @@ namespace LibraryWEB.Services.implementation
             var dtos = _mapper.Map<List<BookCategoryDTO>>(datas);
             return dtos;
         }
+        public async Task<SelectList> GetSelectListItems()
+        {
+            return await _bookCategoryRepository.GetSelectListItems();
+        }
+
+
+
 
         public async Task<BookCategoryDTO> GetByIdAsync(int id)
         {

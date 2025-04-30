@@ -13,19 +13,19 @@
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-           
+
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-               <div class="form-group">
-                <label asp-for="BookId" class="control-label"></label>
-                <input asp-for="BookId" class="form-control" />
-                <span asp-validation-for="BookId" class="text-danger"></span>
+            <div class="form-group">
+                <label asp-for="@Model.BookId" class="control-label">Books</label>
+                <select asp-for="@Model.BookId" class="form-control" asp-items="@ViewBag.Books"></select>
+                <span asp-validation-for="@Model.BookId" class="text-danger"></span>
             </div>
-               
-           
+
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

@@ -1,6 +1,7 @@
 ﻿using LibraryWEB.DataBase;
 using LibraryWEB.Entity;
 using LibraryWEB.Repository.Interface;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace LibraryWEB.Repository.Implementation
@@ -42,7 +43,13 @@ namespace LibraryWEB.Repository.Implementation
             return data;
         }
 
-  
+        public async Task<SelectList> GetSelectListItems()
+        {
+            var datas = await _context.BookCategories.ToListAsync();
+
+            return new SelectList(datas, "Id", "Name");
+        }
+
         public async void Update(BookCategory bookCategory)
         {
             var existingCategory = await _context.BookCategories.FindAsync(bookCategory.Id);

@@ -18,7 +18,7 @@ namespace LibraryWEB
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             //builder.Services.AddDbContext<LibraryDbContext>(ops => ops.UseSqlServer(builder.Configuration.GetConnectionString("SQLServerConnectionString")));
-            builder.Services.AddDbContext<LibraryDbContext>(ops => ops.UseSqlServer(builder.Configuration.GetConnectionString("SQLServerConnectionStringCodeA")));
+            builder.Services.AddDbContext<LibraryDbContext>(ops => ops.UseSqlServer(builder.Configuration.GetConnectionString("SQLServerConnectionString")));
 
             builder.Services.AddAutoMapper(typeof(CustomProfile));
 
