@@ -17,8 +17,8 @@ namespace LibraryWEB.Repository.Implementation
 
         public async Task<Author> CreateAsync(Author author)
         {
-           await _context.Authors.AddAsync(author);
-            await _context.SaveChangesAsync();  
+            await _context.Authors.AddAsync(author);
+            await _context.SaveChangesAsync();
             return author;
         }
 
@@ -35,7 +35,7 @@ namespace LibraryWEB.Repository.Implementation
         public async Task<List<Author>> GetAllAsync()
         {
             var datas = await _context.Authors.ToListAsync();
-            return datas;
+            return datas.Where(x => x.IsDelated == 0).ToList();
         }
 
         public async Task<Author> GetByIdAsync(int id)
@@ -44,7 +44,7 @@ namespace LibraryWEB.Repository.Implementation
             return data;
         }
 
-   
+
 
         public async Task Update(Author author)
         {
@@ -56,7 +56,7 @@ namespace LibraryWEB.Repository.Implementation
             _context.Entry(existingAuthor).State = EntityState.Detached;
             _context.Attach(author);
             _context.Entry(author).State = EntityState.Modified;
-           await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
         }
     }
 }

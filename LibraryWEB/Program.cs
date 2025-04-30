@@ -17,17 +17,19 @@ namespace LibraryWEB
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddDbContext<LibraryDbContext>(ops => ops.UseSqlServer(builder.Configuration.GetConnectionString("SQLServerConnectionString"))); 
+            //builder.Services.AddDbContext<LibraryDbContext>(ops => ops.UseSqlServer(builder.Configuration.GetConnectionString("SQLServerConnectionString")));
+            builder.Services.AddDbContext<LibraryDbContext>(ops => ops.UseSqlServer(builder.Configuration.GetConnectionString("SQLServerConnectionStringEvr")));
+
             builder.Services.AddAutoMapper(typeof(CustomProfile));
 
-            builder.Services.AddScoped<IBookRepository,BookRepository>();
-            builder.Services.AddScoped<IBookService,BookService>();
+            builder.Services.AddScoped<IBookRepository, BookRepository>();
+            builder.Services.AddScoped<IBookService, BookService>();
 
-            builder.Services.AddScoped<IAuthorRepository,AuthorRepository>();
+            builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
             builder.Services.AddScoped<IAuthorService, AuthorService>();
 
             builder.Services.AddScoped<IAuthorContactRepository, AuthorContactRepository>();
-           
+
             builder.Services.AddScoped<IBookCategoryRepository, BookCategoryRepository>();
             builder.Services.AddScoped<IBookCategoryService, BookCategoryService>();
 

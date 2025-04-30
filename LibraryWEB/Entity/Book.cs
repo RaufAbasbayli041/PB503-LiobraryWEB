@@ -9,6 +9,7 @@ namespace LibraryWEB.Entity
         public int Pages { get; set; }
         public ICollection<BookCategory> BookCategories { get; set; }
         public ICollection<Author> Authors { get; set; }
+        public ICollection<Publisher> Publishers{ get; set; }
 
 
     }

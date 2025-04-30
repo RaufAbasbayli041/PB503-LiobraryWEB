@@ -19,6 +19,8 @@
             <th scope="col">Name</th>
             <th scope="col">Description</th>
             <th scope="col">Pages</th>
+            <th scope="col">Category</th>
+            <th scope="col">Publisher</th>
             <th scope="col">Actions</th>
 
         </tr>
@@ -31,6 +33,8 @@
                 <td>@book.Name</td>
                 <td>@book.Description</td>
                 <td>@book.Pages</td>
+                <td>@book.BookCategories</td>
+                <td>@book.Publishers</td>
                 <td>
                     <a asp-action="Update" asp-route-id="@book.Id" class="btn btn-outline-primary">Edit</a> |
                     <a asp-action="Details" asp-route-id="@book.Id" class="btn btn-outline-secondary">Details</a> |

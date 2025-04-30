@@ -38,7 +38,7 @@ namespace LibraryWEB.Services.implementation
             if (item is not null)
             {
                 item.IsDelated = 1;
-                _authorRepository.Update(item);
+               await _authorRepository.Update(item);
             }
         }
 
@@ -70,7 +70,7 @@ namespace LibraryWEB.Services.implementation
             var data = await _authorRepository.GetByIdAsync(authorDTO.Id);
             if (data is not null)
             {
-                var entity = _mapper.Map<Author>(data);
+                var entity = _mapper.Map<Author>(authorDTO);
                await _authorRepository.Update(entity);  
             }
         }

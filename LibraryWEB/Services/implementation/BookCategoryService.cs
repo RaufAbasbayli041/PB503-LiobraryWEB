@@ -19,7 +19,7 @@ namespace LibraryWEB.Services.implementation
 
         public async Task<BookCategoryDTO> CreateAsync(BookCategoryDTO bookCategoryDTO)
         {
-
+            
             var inputData = _mapper.Map<BookCategory>(bookCategoryDTO);
             var outputData = await _bookCategoryRepository.CreateAsync(inputData);
             var dto = _mapper.Map<BookCategoryDTO>(outputData);
@@ -46,7 +46,7 @@ namespace LibraryWEB.Services.implementation
             return dto;
         }
 
-        public async void Update(BookCategoryDTO bookCategoryDTO)
+        public async Task Update(BookCategoryDTO bookCategoryDTO)
         {
             if (bookCategoryDTO.Id < 1)
             {
@@ -56,7 +56,7 @@ namespace LibraryWEB.Services.implementation
             var item = await _bookCategoryRepository.GetByIdAsync(bookCategoryDTO.Id);
             if (item is not null)
             {
-                var entity = _mapper.Map<BookCategory>(item);
+                var entity = _mapper.Map<BookCategory>(bookCategoryDTO);
                 _bookCategoryRepository.Update(entity);
 
             }
@@ -64,8 +64,8 @@ namespace LibraryWEB.Services.implementation
 
         public async Task DeleteAsync(int id)
         {
-
-            var item = await _bookCategoryRepository.GetByIdAsync(id);
+          
+            var item = await _bookCategoryRepository.GetByIdAsync( id);
             if (item is not null)
             {
                 item.IsDelated = 1;

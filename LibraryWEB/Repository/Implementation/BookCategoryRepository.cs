@@ -33,7 +33,7 @@ namespace LibraryWEB.Repository.Implementation
         public async Task<List<BookCategory>> GetAllAsync()
         {
             var datas = await _context.BookCategories.ToListAsync();
-            return datas;
+            return datas.Where(x=>x.IsDelated==0).ToList();
         }
 
         public async Task<BookCategory> GetByIdAsync(int id)

@@ -22,7 +22,7 @@ namespace LibraryWEB.Controllers
 
         [HttpGet]
         public async Task<IActionResult> Create()
-        {         
+        {
             return View();
         }
 
@@ -85,7 +85,6 @@ namespace LibraryWEB.Controllers
         {
             try
             {
-
                 await _authorService.DeleteAsync(id);
                 return RedirectToAction("Index");
             }
