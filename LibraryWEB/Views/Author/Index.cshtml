@@ -17,6 +17,7 @@
             <th scope="col">Id</th>
             <th scope="col">Name</th>
             <th scope="col">Surname</th>
+            <th scope="col">Book Id</th>
     
 
         </tr>
@@ -28,6 +29,13 @@
                 <th scope="row">@author.Id</th>
                 <td>@author.Name</td>
                 <td>@author.Surname</td>
+                <td>@foreach( var book in author.Books)
+                    {
+                        <ul>
+                            <li>@book.Name</li>
+                        </ul>
+                    }
+                </td>
                 
                 <td>
                     <a asp-action="Update" asp-route-id="@author.Id" class="btn btn-outline-primary">Edit</a> |

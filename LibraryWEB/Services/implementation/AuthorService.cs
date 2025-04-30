@@ -3,6 +3,7 @@ using LibraryWEB.DTO;
 using LibraryWEB.Entity;
 using LibraryWEB.Repository.Implementation;
 using LibraryWEB.Repository.Interface;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace LibraryWEB.Services.implementation
 {
@@ -22,6 +23,10 @@ namespace LibraryWEB.Services.implementation
         {
 
             var input = _mapper.Map<Author>(authorDTO);
+            var datas = input.Books.Select(n=>new Author
+            {
+
+            }) ;
             var output = await _authorRepository.CreateAsync(input);
             var dto = _mapper.Map<AuthorDTO>(output);
             return dto;
@@ -58,6 +63,11 @@ namespace LibraryWEB.Services.implementation
             var data = await _authorRepository.GetByIdAsync(id);
             var dto = _mapper.Map<AuthorDTO>(data);
             return dto;
+        }
+
+        public async Task<SelectList> GetSelectListItems()
+        {
+            return await _authorRepository.GetSelectListItems();
         }
 
         public async Task UpdateAsync(AuthorDTO authorDTO)

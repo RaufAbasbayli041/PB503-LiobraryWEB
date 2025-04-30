@@ -1,6 +1,7 @@
 ﻿using LibraryWEB.DataBase;
 using LibraryWEB.Entity;
 using LibraryWEB.Repository.Interface;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
 
@@ -34,7 +35,7 @@ namespace LibraryWEB.Repository.Implementation
 
         public async Task<List<Author>> GetAllAsync()
         {
-            var datas = await _context.Authors.ToListAsync();
+            var datas = await _context.Authors.Include(m=>m.Books).ToListAsync();
             return datas.Where(x => x.IsDelated == 0).ToList();
         }
 
@@ -44,7 +45,12 @@ namespace LibraryWEB.Repository.Implementation
             return data;
         }
 
+        public async Task<SelectList> GetSelectListItems()
+        {
+            var datas = await _context.Books.ToListAsync();
 
+            return new SelectList(datas, "Id", "Name");
+        }
 
         public async Task Update(Author author)
         {

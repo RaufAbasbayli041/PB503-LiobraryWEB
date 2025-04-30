@@ -240,7 +240,7 @@ namespace LibraryWEB.Migrations
             modelBuilder.Entity("LibraryWEB.Entity.Publisher", b =>
                 {
                     b.HasOne("LibraryWEB.Entity.Book", "Book")
-                        .WithMany()
+                        .WithMany("Publishers")
                         .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -257,6 +257,8 @@ namespace LibraryWEB.Migrations
             modelBuilder.Entity("LibraryWEB.Entity.Book", b =>
                 {
                     b.Navigation("BookCategories");
+
+                    b.Navigation("Publishers");
                 });
 #pragma warning restore 612, 618
         }

@@ -23,6 +23,7 @@ namespace LibraryWEB.Controllers
         [HttpGet]
         public async Task<IActionResult> Create()
         {
+            ViewBag.Books = await _authorService.GetSelectListItems();
             return View();
         }
 

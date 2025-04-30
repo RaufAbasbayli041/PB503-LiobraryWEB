@@ -1,4 +1,5 @@
 ﻿using LibraryWEB.DTO;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace LibraryWEB.Services
 {
@@ -9,5 +10,6 @@ namespace LibraryWEB.Services
         Task<List<AuthorDTO>> GetAllAsync();
         Task<AuthorDTO> GetByIdAsync(int id);
         Task DeleteAsync(int id);
+        Task<SelectList> GetSelectListItems();
     }
 }
