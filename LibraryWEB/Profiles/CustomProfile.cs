@@ -8,16 +8,7 @@ namespace LibraryWEB.Profiles
     {
         public CustomProfile()
         {
-            CreateMap<AuthorDTO, Author>()
-            .ForMember(dest => dest.Books, opt => opt.Ignore())
-            .AfterMap((src, dest, context) =>
-            {
-                var allBooks = context.Items["AllBooks"] as List<Book>;
-                if (allBooks != null)
-                {
-                    dest.Books = allBooks.Where(b => src.BookIds.Contains(b.Id)).ToList();
-                }
-            });
+           
             CreateMap<Book,BookDTO>().ReverseMap();
             CreateMap<Author,AuthorDTO>().ReverseMap();
             CreateMap<AuthorContact,AuthorContactDTo>().ReverseMap();

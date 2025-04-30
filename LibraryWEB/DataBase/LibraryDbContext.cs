@@ -14,6 +14,7 @@ namespace LibraryWEB.DataBase
         public DbSet<Book> Books { get; set; }
         public DbSet<BookCategory> BookCategories { get; set; }
         public DbSet<Publisher> Publishers { get; set; }
+        public DbSet<BookAuthors> BookAuthors{ get; set; }
 
     }
 }

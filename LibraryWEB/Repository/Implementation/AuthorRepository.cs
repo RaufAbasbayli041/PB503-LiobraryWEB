@@ -18,6 +18,7 @@ namespace LibraryWEB.Repository.Implementation
 
         public async Task<Author> CreateAsync(Author author)
         {
+             
             await _context.Authors.AddAsync(author);
             await _context.SaveChangesAsync();
             return author;
@@ -35,7 +36,7 @@ namespace LibraryWEB.Repository.Implementation
 
         public async Task<List<Author>> GetAllAsync()
         {
-            var datas = await _context.Authors.Include(m=>m.Books).ToListAsync();
+            var datas = await _context.Authors.Include(m=>m.BookAuthors).ThenInclude(m=>m.Book).ToListAsync();
             return datas.Where(x => x.IsDelated == 0).ToList();
         }
 

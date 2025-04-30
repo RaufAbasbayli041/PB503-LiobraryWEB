@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using LibraryWEB.DataBase;
 using LibraryWEB.DTO;
 using LibraryWEB.Entity;
 using LibraryWEB.Repository.Implementation;
@@ -12,22 +13,44 @@ namespace LibraryWEB.Services.implementation
 
         private readonly IAuthorRepository _authorRepository;
         private readonly IMapper _mapper;
+        private readonly LibraryDbContext _libraryDbContext;
 
-        public AuthorService(IMapper mapper, IAuthorRepository authorRepository)
+        public AuthorService(IMapper mapper, IAuthorRepository authorRepository, LibraryDbContext libraryDbContext)
         {
             this._mapper = mapper;
             this._authorRepository = authorRepository;
+            _libraryDbContext = libraryDbContext;
         }
 
         public async Task<AuthorDTO> CreateAsync(AuthorDTO authorDTO)
         {
+            //var input = new Author
+            //{
+                
+            //    Name = authorDTO.Name,
+            //   CreatedDate = authorDTO.CreatedDate,
+            //   Surname = authorDTO.Surname, 
+            //   ContactId = authorDTO.ContactId,
+            //   UpdateDate = authorDTO.UpdateDate,
+
+
+            //};
+
 
             var input = _mapper.Map<Author>(authorDTO);
-            var datas = input.Books.Select(n=>new Author
-            {
-
-            }) ;
             var output = await _authorRepository.CreateAsync(input);
+           
+            
+            foreach (var id in authorDTO.BookIds)
+            {
+                var bookauthor = new BookAuthors
+                {
+                    AuthorID = output.Id,
+                    BookID = id,
+                };
+                await _libraryDbContext.BookAuthors.AddAsync(bookauthor);
+                await _libraryDbContext.SaveChangesAsync();
+            }
             var dto = _mapper.Map<AuthorDTO>(output);
             return dto;
 

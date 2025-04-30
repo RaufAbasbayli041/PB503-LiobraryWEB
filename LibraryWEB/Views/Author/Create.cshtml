@@ -23,7 +23,7 @@
                 <span asp-validation-for="Surname" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Books" class="control-label"></label>
+                <label asp-for="BookIds" class="control-label">Books</label>
                 <select asp-for="BookIds" class="form-control" asp-items="@ViewBag.Books"></select>
                 <span asp-validation-for="BookIds" class="text-danger"></span>
             </div>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9qpb60vDWnM=",
+  "dgSpecHash": "u2RnU3cPIuU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\raufka\\Desktop\\Rauf\\PB503-LiobraryWEB\\LibraryWEB\\LibraryWEB.csproj",
+  "projectFilePath": "C:\\Users\\raufka\\Desktop\\rauf\\PB503-LiobraryWEB\\LibraryWEB\\LibraryWEB.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\raufka\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\raufka\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",

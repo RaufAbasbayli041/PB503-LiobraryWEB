@@ -1,4 +1,5 @@
 ﻿using LibraryWEB.DTO;
+using LibraryWEB.Entity;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace LibraryWEB.Services

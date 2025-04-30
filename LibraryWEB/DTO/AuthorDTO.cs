@@ -8,6 +8,6 @@ namespace LibraryWEB.DTO
         public int ContactId { get; set; }
         public AuthorContact AuthorContact { get; set; }
         public List<int> BookIds { get; set; }
-        public ICollection<Book> Books { get; set; }
+        public ICollection<BookAuthors> BookAuthors { get; set; }
     }
 }

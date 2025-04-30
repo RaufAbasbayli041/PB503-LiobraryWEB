@@ -22,21 +22,6 @@ namespace LibraryWEB.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("AuthorBook", b =>
-                {
-                    b.Property<int>("AuthorsId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("BooksId")
-                        .HasColumnType("int");
-
-                    b.HasKey("AuthorsId", "BooksId");
-
-                    b.HasIndex("BooksId");
-
-                    b.ToTable("AuthorBook");
-                });
-
             modelBuilder.Entity("LibraryWEB.Entity.Author", b =>
                 {
                     b.Property<int>("Id")
@@ -138,6 +123,38 @@ namespace LibraryWEB.Migrations
                     b.ToTable("Books");
                 });
 
+            modelBuilder.Entity("LibraryWEB.Entity.BookAuthors", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AuthorID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("BookID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("IsDelated")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AuthorID");
+
+                    b.HasIndex("BookID");
+
+                    b.ToTable("BookAuthors");
+                });
+
             modelBuilder.Entity("LibraryWEB.Entity.BookCategory", b =>
                 {
                     b.Property<int>("Id")
@@ -200,21 +217,6 @@ namespace LibraryWEB.Migrations
                     b.ToTable("Publishers");
                 });
 
-            modelBuilder.Entity("AuthorBook", b =>
-                {
-                    b.HasOne("LibraryWEB.Entity.Author", null)
-                        .WithMany()
-                        .HasForeignKey("AuthorsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("LibraryWEB.Entity.Book", null)
-                        .WithMany()
-                        .HasForeignKey("BooksId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("LibraryWEB.Entity.AuthorContact", b =>
                 {
                     b.HasOne("LibraryWEB.Entity.Author", "Author")
@@ -224,6 +226,25 @@ namespace LibraryWEB.Migrations
                         .IsRequired();
 
                     b.Navigation("Author");
+                });
+
+            modelBuilder.Entity("LibraryWEB.Entity.BookAuthors", b =>
+                {
+                    b.HasOne("LibraryWEB.Entity.Author", "Author")
+                        .WithMany("BookAuthors")
+                        .HasForeignKey("AuthorID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("LibraryWEB.Entity.Book", "Book")
+                        .WithMany("BookAuthors")
+                        .HasForeignKey("BookID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Author");
+
+                    b.Navigation("Book");
                 });
 
             modelBuilder.Entity("LibraryWEB.Entity.BookCategory", b =>
@@ -252,10 +273,14 @@ namespace LibraryWEB.Migrations
                 {
                     b.Navigation("AuthorContact")
                         .IsRequired();
+
+                    b.Navigation("BookAuthors");
                 });
 
             modelBuilder.Entity("LibraryWEB.Entity.Book", b =>
                 {
+                    b.Navigation("BookAuthors");
+
                     b.Navigation("BookCategories");
 
                     b.Navigation("Publishers");

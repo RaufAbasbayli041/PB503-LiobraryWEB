@@ -1,4 +1,5 @@
 ﻿using LibraryWEB.DTO;
+using LibraryWEB.Entity;
 using LibraryWEB.Services;
 using LibraryWEB.Services.implementation;
 using Microsoft.AspNetCore.Mvc;
@@ -30,6 +31,7 @@ namespace LibraryWEB.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(AuthorDTO authorDTO)
         {
+            ViewBag.Books = await _authorService.GetSelectListItems();
             try
             {
                 await _authorService.CreateAsync(authorDTO);
